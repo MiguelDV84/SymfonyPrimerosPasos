@@ -4,6 +4,10 @@ namespace App\Entity;
 
 use App\Repository\TareaRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Mime\Message;
+use Symfony\Component\Validator\Constraint as Assert;
+
+
 
 #[ORM\Entity(repositoryClass: TareaRepository::class)]
 class Tarea
@@ -14,6 +18,7 @@ class Tarea
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    
     private ?string $descripcion = null;
 
     public function getId(): ?int

@@ -20,7 +20,7 @@
       <th scope="row">{{index + 1}}</th>
       <td>{{tarea.descripcion}}</td>
       <td>
-        <a href="{{path('app_editar_tarea', {'id':tarea.id})}}">Editar</a>
+        <a href="{{path('app_editar_tarea_params_convert', {'id':tarea.id})}}">Editar</a>
         <a href="{{path('app_eliminar_tarea', {'id':tarea.id})}}">Eliminar</a>
       </td>
     {% else %}
