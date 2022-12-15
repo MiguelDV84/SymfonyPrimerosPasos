@@ -58,7 +58,7 @@ class TareaController extends AbstractController
             if(!empty($descripcion)){
                 $tarea->setDescripcion($descripcion);
                 $em->flush();
-                $this->addFlash('success','Tarea editada correctamente');
+                $this->addFlash('success','La tarea ha sido editada correctamente');
                 return $this->redirectToRoute('app_listado_tarea');
             }else{
                 $this->addFlash('warning','El campo descripción es obligatorio, la tarea no ha podido realizarse.');
