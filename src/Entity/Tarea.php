@@ -3,13 +3,15 @@
 namespace App\Entity;
 
 use App\Repository\TareaRepository;
+use App\Validator as AppAssert;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Mime\Message;
-use Symfony\Component\Validator\Constraint as Assert;
+
+
 
 
 
 #[ORM\Entity(repositoryClass: TareaRepository::class)]
+#[AppAssert\TareaUnica]
 class Tarea
 {
     #[ORM\Id]
@@ -18,7 +20,7 @@ class Tarea
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    
+
     private ?string $descripcion = null;
 
     public function getId(): ?int
