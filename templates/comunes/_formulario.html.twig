@@ -1,0 +1,9 @@
+<form method="POST" action="{{accion}}">
+  <div class="form-group">
+    <label for="descripcion">Descripción</label>
+    <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Descripcion" value="{{tarea.descripcion}}">
+    <small id="descripcionAyuda" class="form-text text-muted">Escribe una breve descripcion de la tarea</small>
+  </div>
+ 
+  <button type="submit" class="btn btn-primary">{{etiqueta_btn_enviar|default('Guardar')}}</button>
+</form

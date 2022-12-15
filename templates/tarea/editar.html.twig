@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TareaController!{% endblock %}
+
+{% block body %}
+    <h1>Editar Tarea </h1>
+
+    {% include 'comunes/_mensajeFlash.html.twig' %}
+    {% include 'comunes/_formulario.html.twig' with {'accion': path('app_editar_tarea', {'id':tarea.id}), 'etiqueta_btn_enviar':'Editar'} %}
+{% endblock %}
